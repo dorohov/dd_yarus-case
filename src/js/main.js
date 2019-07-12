@@ -67,18 +67,5 @@
             startAnimationGraphs()
         })
 
-        $('.__dd__cursor').on('mousemove', function(e) {
-            var xPos = e.clientX
-            $('.__dd__block-on__or.is--on').css({
-                transform: 'translateX(-' + xPos / 40 + 'px)'
-            })
-            $('.__dd__block-on__or.is--tw').css({
-                transform: 'translateX(' + xPos / 80 + 'px)'
-            })
-            $('.__dd__block-on__or.is--th').css({
-                transform: 'translateX(-' + xPos / 110 + 'px)'
-            })
-        })
-
     })
 })(jQuery);
