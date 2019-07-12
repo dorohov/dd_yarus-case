@@ -1,0 +1,26 @@
+<div class="__dd__table">
+    <div class="__dd__table__inner __dd__container">
+        <table>
+            <thead class="is--@@color">
+                <tr>
+                    <th>Дата</th>
+                    <th>Показы</th>
+                    <th>Клики</th>
+                    <th>CTR(%)</th>
+                    <th>Расход всего, @@include('../components/component.svg.html', {"name": "ruble"})</th>
+                    <th>Ср.цена клика, @@include('../components/component.svg.html', {"name": "ruble"})</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="is--@@color">Всего с <span>@@ds</span> по <span>@@de</span></td>
+                    <td class="is--mt" data-text="Показы"><span>@@views</span></td>
+                    <td class="is--mt" data-text="Клики"><span>@@clicks</span></td>
+                    <td class="is--mt" data-text="CTR(%)"><span>@@ctr</span></td>
+                    <td class="is--mt" data-text="Расход всего (Руб.)"><span>Секрет <img src="img/smile.svg" alt=""></span></td>
+                    <td class="is--mt" data-text="Ср.цена клика, (Руб.)"><span>@@price</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

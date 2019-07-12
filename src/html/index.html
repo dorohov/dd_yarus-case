@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Орион кейс</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+    <div class="__dd">
+        <div class="__dd__cursor">
+            @@include('blocks/block1.html')
+            @@include('blocks/block2.html')
+            @@include('blocks/block3.html')
+        </div>
+        @@include('blocks/block4.html')
+        @@include('blocks/block5.html')
+        @@include('blocks/results.html')
+        @@include('blocks/graphs.html', {
+            "prefix": "graph1",
+            "items": [
+                {
+                    "title": "Клики Яндекс.Директ",
+                    "sub": "Количество кликов",
+                    "color": "pink",
+                    "image": "graph11"
+                },
+                {
+                    "title": "Охват Яндекс.Директ",
+                    "sub": "Количество показов",
+                    "color": "green",
+                    "image": "graph12"
+                },
+                {
+                    "title": "%CTR Яндекс.Директ",
+                    "sub": "%CTR",
+                    "color": "blue",
+                    "image": "graph13"
+                },
+                {
+                    "title": "Стоимость клика Яндекс.Директ",
+                    "sub": "<span class='is--rub'>&#8381;</span>&#92;клик",
+                    "color": "bluew",
+                    "image": "graph14"
+                }
+            ]
+        })
+        @@include('blocks/conc.html', {
+            "title": "Вывод",
+            "desc": "За 4 месяца проделанной работы контекстной рекламы в Яндекс.Директ увеличилось <br> количество кликов в 5 раз,  CTR объявлений вырос с 4% до 10%, увеличился охват более <br> чем в 3 раза, стоимость клика уменьшилась с 39.20  ₽ до 15.99 ₽."
+        })
+        @@include('blocks/block6.html')
+        @@include('blocks/results.html')
+        @@include('blocks/graphs.html', {
+            "prefix": "graph1",
+            "items": [
+                {
+                    "title": "Охват в РСЯ",
+                    "sub": "Количество показов",
+                    "color": "pink",
+                    "image": "graph21"
+                },
+                {
+                    "title": "Клики в РСЯ",
+                    "sub": "Количество кликов",
+                    "color": "green",
+                    "image": "graph22"
+                },
+                {
+                    "title": "%CTR в РСЯ",
+                    "sub": "%CTR",
+                    "color": "blue",
+                    "image": "graph23"
+                },
+                {
+                    "title": "Стоимость клика Яндекс.Директ",
+                    "sub": "<span class='is--rub'>&#8381;</span>&#92;клик",
+                    "color": "bluew",
+                    "image": "graph24"
+                }
+            ]
+        })
+        @@include('blocks/conc.html', {
+            "title": "Вывод",
+            "desc": "За 4 месяца проделанной работы в Яндекс.Директ (РСЯ) увеличилось количество кликов <br> в 10 раз,  CTR объявлений вырос с 0,08% до 0,35%, увеличился охват более чем в 3 раза, <br> стоимость клика уменьшилась с 10,76  ₽ до 5,57 ₽"
+        })
+        @@include('blocks/block7.html')
+        @@include('blocks/footer.html')
+    </div>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bundle-min.js"></script>
+</body>
+</html>

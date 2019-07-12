@@ -1,0 +1,14 @@
+<div class="__dd__graphs">
+    <div class="__dd__graphs__inner __dd__container">
+        <div class="__dd__graphs__inner__list">
+            @@for(var i = 0; i < items.length; i++) {
+                @@include('graphs_block.html', {
+                    "title": "`+items[i].title+`",
+                    "sub": "`+items[i].sub+`",
+                    "color": "`+items[i].color+`",
+                    "image": "`+items[i].image+`"
+                })
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		
+<!--
+	
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-branch_left-dims { width: 32px; height: 60px; }
+	.svg-branch_right-dims { width: 33px; height: 60px; }
+	.svg-ruble-dims { width: 10px; height: 14px; }
+</style>
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+	
+<!--
+	
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 32 60" id="branch_left" xmlns="http://www.w3.org/2000/svg"><path d="M19.215 23.707c5.53 0 10.722-3.444 12.67-8.947a1.356 1.356 0 0 0-.826-1.73 13.337 13.337 0 0 0-10.212.515 30.56 30.56 0 0 1 2.692-3.08 1.356 1.356 0 1 0-1.918-1.919 33.39 33.39 0 0 0-1.98 2.167c-.15-4.028-2.095-7.949-5.626-10.461a1.356 1.356 0 0 0-1.891.318 13.34 13.34 0 0 0-2.3 10.016 13.328 13.328 0 0 0 4.819 8.226 32.978 32.978 0 0 0-1.171 3.148 13.655 13.655 0 0 0-.932-1.735 13.34 13.34 0 0 0-8.406-5.912 1.356 1.356 0 0 0-1.62 1.027C.953 22.313 5.15 29.256 11.94 31.186a33.386 33.386 0 0 0 .178 4.308c-.314-.28-.642-.547-.986-.8a13.34 13.34 0 0 0-9.98-2.454 1.356 1.356 0 0 0-1.135 1.545 13.338 13.338 0 0 0 5.32 8.792 13.327 13.327 0 0 0 9.293 2.54 32.867 32.867 0 0 0 1.92 3.773c-4.197-1.345-8.97-.61-12.626 2.384a1.357 1.357 0 0 0-.19 1.908 13.34 13.34 0 0 0 9.058 4.854 13.303 13.303 0 0 0 9.067-2.389 33.386 33.386 0 0 0 4.962 4.016 1.355 1.355 0 0 0 1.495-2.264 30.668 30.668 0 0 1-4.775-3.9 30.246 30.246 0 0 1-7.101-11.185c6.44-2.482 10.023-9.55 8.052-16.29a1.357 1.357 0 0 0-1.683-.922 13.34 13.34 0 0 0-8.009 6.44c-.055.1-.104.201-.156.302a30.581 30.581 0 0 1 1.257-8.557c1.103.283 2.216.42 3.315.42zm-7.336 4.609c-4.492-1.668-7.346-6.17-6.94-10.944a10.633 10.633 0 0 1 5.31 4.305 10.634 10.634 0 0 1 1.63 6.639zM6.943 40.392a10.634 10.634 0 0 1-3.93-5.593l.172-.002c4.721 0 8.93 3.137 10.27 7.677a10.65 10.65 0 0 1-6.512-2.082zm6.117 14.945a10.635 10.635 0 0 1-6.231-2.81 10.739 10.739 0 0 1 12.895 1.284 10.639 10.639 0 0 1-6.664 1.526zm4.118-22.493a10.636 10.636 0 0 1 5.023-4.637c.711 4.738-1.848 9.413-6.224 11.367a10.643 10.643 0 0 1 1.201-6.73zm4.786-16.828a10.635 10.635 0 0 1 6.786-.824 10.738 10.738 0 0 1-11.696 5.58 10.637 10.637 0 0 1 4.91-4.756zm-9.466-5.88a10.633 10.633 0 0 1 1.072-6.752c3.493 3.28 4.378 8.536 2.152 12.779a10.633 10.633 0 0 1-3.224-6.027z"/></symbol>
+		<symbol viewBox="0 0 33 60" id="branch_right" xmlns="http://www.w3.org/2000/svg"><path d="M19.665 45.188c2.839 0 5.595-.898 7.925-2.61a13.338 13.338 0 0 0 5.32-8.793 1.356 1.356 0 0 0-1.136-1.545c-4.111-.628-8.08.69-10.966 3.263.152-1.435.213-2.877.179-4.317a13.328 13.328 0 0 0 7.662-5.722 13.34 13.34 0 0 0 1.763-10.124 1.356 1.356 0 0 0-1.62-1.028 13.339 13.339 0 0 0-8.405 5.913 13.64 13.64 0 0 0-.932 1.735 32.976 32.976 0 0 0-1.172-3.149c5.49-4.415 6.657-12.427 2.52-18.241A1.355 1.355 0 0 0 18.91.251a13.34 13.34 0 0 0-5.455 8.71 13.666 13.666 0 0 0-.177 1.744 33.314 33.314 0 0 0-1.974-2.159 1.356 1.356 0 1 0-1.918 1.918 30.83 30.83 0 0 1 2.692 3.08 13.336 13.336 0 0 0-10.212-.515 1.356 1.356 0 0 0-.826 1.731c1.948 5.503 7.14 8.947 12.67 8.947 1.099 0 2.212-.137 3.315-.42a30.607 30.607 0 0 1 1.258 8.57 13.386 13.386 0 0 0-8.166-6.755 1.356 1.356 0 0 0-1.682.921 13.339 13.339 0 0 0 1.11 10.217 13.325 13.325 0 0 0 6.94 6.075 30.251 30.251 0 0 1-7.1 11.184 30.66 30.66 0 0 1-4.774 3.9 1.356 1.356 0 0 0 1.495 2.264 33.373 33.373 0 0 0 4.962-4.016 13.365 13.365 0 0 0 7.723 2.45c3.89 0 7.75-1.677 10.401-4.915a1.356 1.356 0 0 0-.19-1.908 13.342 13.342 0 0 0-9.837-2.973 13.55 13.55 0 0 0-2.78.577 32.843 32.843 0 0 0 1.912-3.76c.457.045.913.07 1.367.07zm8.323-27.815a10.64 10.64 0 0 1-1.63 6.639 10.635 10.635 0 0 1-5.31 4.305c-.406-4.774 2.448-9.276 6.94-10.944zm1.924 17.426c-1.356 4.595-5.651 7.747-10.44 7.674 1.357-4.595 5.649-7.753 10.44-7.674zM4.176 15.192a10.633 10.633 0 0 1 6.786.823 10.634 10.634 0 0 1 4.91 4.757c-4.693.974-9.502-1.32-11.696-5.58zm13.027.97a10.631 10.631 0 0 1-1.072-6.75 10.635 10.635 0 0 1 3.225-6.028c2.225 4.243 1.34 9.5-2.153 12.779zM19.434 51c2.36-.235 4.678.303 6.663 1.526-3.508 3.263-8.812 3.791-12.895 1.284A10.634 10.634 0 0 1 19.434 51zm-2.486-11.426a10.635 10.635 0 0 1-5.023-4.637 10.635 10.635 0 0 1-1.2-6.73c4.375 1.954 6.934 6.629 6.223 11.367z"/></symbol>
+		<symbol viewBox="0 0 10 14" id="ruble" xmlns="http://www.w3.org/2000/svg"><path d="M1.836-.15h-.15v8.986H.764v1.255h.922v4.059h1.255v-4.06h3.244V8.837H2.94v-.972h2.457c2.123 0 3.839-1.804 3.839-4.008C9.237 1.653 7.52-.15 5.398-.15H1.836zm1.105 1.255h2.458c1.416 0 2.583 1.226 2.583 2.751 0 1.527-1.167 2.753-2.583 2.753H2.94V1.105z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+		
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+	
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+
+				<li title="branch_left">
+					<div class="icon-box">
+						
+						<!-- branch_left -->
+						<svg class="svg-branch_left-dims">
+							<use xlink:href="#branch_left"></use>
+						</svg>
+						
+					</div>
+					<h2>branch_left</h2>
+				</li>
+				<li title="branch_right">
+					<div class="icon-box">
+						
+						<!-- branch_right -->
+						<svg class="svg-branch_right-dims">
+							<use xlink:href="#branch_right"></use>
+						</svg>
+						
+					</div>
+					<h2>branch_right</h2>
+				</li>
+				<li title="ruble">
+					<div class="icon-box">
+						
+						<!-- ruble -->
+						<svg class="svg-ruble-dims">
+							<use xlink:href="#ruble"></use>
+						</svg>
+						
+					</div>
+					<h2>ruble</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+	
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+				
+				<li title="branch_left">
+					<div class="icon-box">
+						
+						<!-- branch_left -->
+						<svg class="svg-branch_left-dims">
+							<use xlink:href="sprites.svg#branch_left"></use>
+						</svg>
+						
+					</div>
+					<h2>branch_left</h2>
+				</li>
+				<li title="branch_right">
+					<div class="icon-box">
+						
+						<!-- branch_right -->
+						<svg class="svg-branch_right-dims">
+							<use xlink:href="sprites.svg#branch_right"></use>
+						</svg>
+						
+					</div>
+					<h2>branch_right</h2>
+				</li>
+				<li title="ruble">
+					<div class="icon-box">
+						
+						<!-- ruble -->
+						<svg class="svg-ruble-dims">
+							<use xlink:href="sprites.svg#ruble"></use>
+						</svg>
+						
+					</div>
+					<h2>ruble</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Thu, 11 Jul 2019 08:08:01 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>
